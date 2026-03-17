@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Care Navigator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="#home-section"><img src="/images/image.png" alt="logo"></a>
+            </div>
+            <div class="menus">
+                <ul>
+                    <li><a href="#home-section">Home</a></li>
+                    <li><a href="#hospitals-section">Hospitals</a></li>
+                    <li><a href="#about-section">About</a></li>
+                    <li><a href="indexmap.html">Google Map</a></li>
+                    <li><a href="#contact-section">Contact Us</a></li>
+                    <li><a href="#" id="logoutBtn">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-1" id="home-section">
+            <div class="social">
+                <ul>
+                    <li class="li-1 anim"><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="li-2 anim"><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                    <li class="li-3 anim"><a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a></li>
+                </ul>
+            </div>
+            <div class="background-shapes">
+                <div class="rectangle"></div>
+                <div class="circle"></div>
+                <div class="circle-2"></div>
+            </div>
+            <div class="content-wrapper">
+                <div class="leftside">
+                    <div class="content">
+                        <h2 class="anim">The home for <span class="anim highlight">HOSPITALS</span></h2>
+                        <h3 class="anim">Connecting you to trusted healthcare services and providers</h3>
+                        <button class="button anim"><a href="#hospitals-section">Let's be Healthy</a></button>
+                    </div>
+                </div>
+                <div class="rightside">
+                    <img src="/images/service-removebg-preview.png" alt="Doctor" class="anim">
+                </div>
+            </div>
+        </section>
+
+        <section id="hospitals-section">
+            <div class="section-heading">
+                <h1>Browse Cities</h1>
+            </div>
+            <div class="cities-container">
+                <div class="city-card">
+                    <div class="city-img">
+                        <img src="/images/lucknow.jpg" alt="Lucknow">
+                    </div>
+                    <div class="city-content">
+                        <div class="btn-1">
+                            <button><a href="./lucknow.html">Explore Hospitals</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="city-card">
+                    <div class="city-img">
+                        <img src="/images/kanpur.jpg" alt="Kanpur">
+                    </div>
+                    <div class="city-content">
+                        <div class="btn-1">
+                            <button><a href="kanpur.html">Explore Hospitals</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="city-card">
+                    <div class="city-img">
+                        <img src="/images/delhi.jpg" alt="New Delhi">
+                    </div>
+                    <div class="city-content">
+                        <div class="btn-1">
+                            <button><a href="delhi.html">Explore Hospitals</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="city-card">
+                    <div class="city-img">
+                        <img src="/images/mumbai.jpg" alt="Mumbai">
+                    </div>
+                    <div class="city-content">
+                        <div class="btn-1">
+                            <button><a href="kanpur.html">Explore Hospitals</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="#contact-section"><img src="/images/customercare.png" alt="Customer Care"></a>
+            </div>
+        </section>
+
+        <section class="city-page" id="lucknow-page">
+            <div class="city-page-content">
+                <button class="back-btn">Go Back</button>
+                <div class="city-header">
+                    <h2>Hospitals in Lucknow</h2>
+                    <p>Discover leading hospitals and healthcare facilities in Lucknow, the city of Nawabs.</p>
+                </div>
+                <div class="hospital-list">
+                    <div class="hospital-card-detail">
+                        <h3>King George's Medical University</h3>
+                        <p>A renowned medical university providing excellent patient care and extensive medical education programs. It is one of the oldest and most respected medical institutions in India.</p>
+                    </div>
+                    <div class="hospital-card-detail">
+                        <h3>Sanjay Gandhi Post Graduate Institute of Medical Sciences (SGPGI)</h3>
+                        <p>A state-of-the-art super-specialty medical institute known for advanced research, specialized treatment, and world-class medical facilities.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="city-page" id="kanpur-page">
+            <div class="city-page-content">
+                <button class="back-btn">Go Back</button>
+                <div class="city-header">
+                    <h2>Hospitals in Kanpur</h2>
+                    <p>Find top-notch healthcare services and hospitals in Kanpur.</p>
+                </div>
+                <div class="hospital-list">
+                    <div class="hospital-card-detail">
+                        <h3>GSVM Medical College</h3>
+                        <p>A well-known public medical college that serves as a major healthcare provider for the city and surrounding regions, offering a wide range of medical services.</p>
+                    </div>
+                    <div class="hospital-card-detail">
+                        <h3>Lala Lajpat Rai Hospital (Hallet Hospital)</h3>
+                        <p>A key government hospital providing essential medical services and emergency care to the residents of Kanpur, with a focus on serving the community's healthcare needs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="city-page" id="delhi-page">
+            <div class="city-page-content">
+                <button class="back-btn">Go Back</button>
+                <div class="city-header">
+                    <h2>Hospitals in New Delhi</h2>
+                    <p>Explore the major medical hubs of India's capital city, New Delhi.</p>
+                </div>
+                <div class="hospital-list">
+                    <div class="hospital-card-detail">
+                        <h3>All India Institute of Medical Sciences (AIIMS)</h3>
+                        <p>A globally recognized public medical research institute and hospital, AIIMS is at the forefront of medical technology and education in India.</p>
+                    </div>
+                    <div class="hospital-card-detail">
+                        <h3>Safdarjung Hospital</h3>
+                        <p>One of the largest government hospitals in India, offering a wide variety of medical and surgical services and attracting patients from all over the country.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="city-page" id="mumbai-page">
+            <div class="city-page-content">
+                <button class="back-btn">Go Back</button>
+                <div class="city-header">
+                    <h2>Hospitals in Mumbai</h2>
+                    <p>Discover the finest hospitals and advanced medical facilities in the financial capital of India.</p>
+                </div>
+                <div class="hospital-list">
+                    <div class="hospital-card-detail">
+                        <h3>Breach Candy Hospital</h3>
+                        <p>A leading private hospital known for its state-of-the-art facilities, specialized treatments, and high standards of patient care in a modern, comforting environment.</p>
+                    </div>
+                    <div class="hospital-card-detail">
+                        <h3>Kokilaben Dhirubhai Ambani Hospital</h3>
+                        <p>A multi-specialty hospital that focuses on modern medical technology, advanced surgical procedures, and compassionate care, making it a top choice for patients.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about-section">
+            <div class="section-heading">
+                <h1>About Us</h1>
+            </div>
+            <div class="about-container">
+                <div class="about-content">
+                    <div class="box">
+                        <h3><i class="fas fa-ambulance"></i> Ambulance Services</h3>
+                        <p>We provide emergency ambulance services across Odisha, ensuring rapid and safe transport for critical patients.</p>
+                    </div>
+                    <div class="box">
+                        <h3><i class="fas fa-procedures"></i> Emergency Rooms</h3>
+                        <p>Our emergency rooms are equipped with modern technology and staffed 24/7 to handle any medical emergency with speed and expertise.</p>
+                    </div>
+                    <div class="box">
+                        <h3><i class="fas fa-stethoscope"></i> Free Check-ups</h3>
+                        <p>We offer free second-time visit check-ups for patients, promoting ongoing health management and continuity of care.</p>
+                    </div>
+
+                     <div class="box">
+                        <h3><i class="fas fa-user-md"></i> 24/7 Online Consultation</h3>
+                        <p>Our team of healthcare professionals is available around the clock for online consultations, helping you access medical advice anytime, anywhere.</p>
+                    </div>
+                    
+                </div>
+                <div class="about-image">
+                    <img src="/images/Doctors.gif" alt="Doctors">
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-section">
+            <div class="counter-container">
+                <div class="box-container">
+                    <div class="box">
+                        <i class="fas fa-hospital"></i>
+                        <span>120+</span>
+                        <h3>Hospitals</h3>
+                    </div>
+                    <div class="box">
+                        <i class="fas fa-users"></i>
+                        <span>100+</span>
+                        <h3>Staff</h3>
+                    </div>
+                    <div class="box">
+                        <i class="fas fa-smile"></i>
+                        <span>1200+</span>
+                        <h3>Happy Patients</h3>
+                    </div>
+                    <div class="box">
+                        <i class="fas fa-procedures"></i>
+                        <span>130+</span>
+                        <h3>Bed Facility</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contacts-form">
+                <div class="section-heading">
+                    <h1>Contact Us</h1>
+                </div>
+                <form action="#">
+                    <div class="inputBox">
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="number" placeholder="Phone" required>
+                    </div>
+                    <div class="inputBox">
+                        <input type="email" placeholder="Your Email" required>
+                        <select>
+                            <option value="" disabled selected>Make an appointment</option>
+                            <option value="09-11 am">09-11 am</option>
+                            <option value="11-03 pm">11-03 pm</option>
+                            <option value="03-06 pm">03-06 pm</option>
+                            <option value="06-09 pm">06-09 pm</option>
+                        </select>
+                    </div>
+                    <textarea placeholder="Message (optional)"></textarea>
+                    <div class="btn-1">
+                        <button type="submit">Contact Now</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <section id="footer-section">
+        <footer>
+            <div class="row">
+                <div class="col">
+                    <img src="/images/image.png" alt="Footer Logo" class="footer-logo">
+                    <p>Helping you take control of your health and wellbeing.</p>
+                </div>
+                <div class="col">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="#home-section">Home</a></li>
+                        <li><a href="#hospitals-section">Hospitals</a></li>
+                        <li><a href="#about-section">About</a></li>
+                        <li><a href="#contact-section">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>Contact Information</h3>
+                    <ul>
+                        <li><strong>Phone:</strong> 1800-123-453</li>
+                        <li><strong>Email:</strong> carenavigator@2427.com</li>
+                        <li><strong>Address:</strong> Nearby hospitals</li>
+                    </ul>
+                    <div class="social-icon">
+                        <a href="https://www.facebook.com/"><img src="/images/facebook.png" alt="Facebook"></a>
+                        <a href="https://www.instagram.com/"><img src="/images/instagram.png" alt="Instagram"></a>
+                        <a href="https://www.twitter.com/"><img src="/images/twitter.png" alt="Twitter"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Care Navigator All rights reserved.</p>
+            </div>
+        </footer>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cityPages = document.querySelectorAll('.city-page');
+            const mainSections = document.querySelectorAll('main > section:not(.city-page)');
+            const backButtons = document.querySelectorAll('.back-btn');
+            const learnMoreButtons = document.querySelectorAll('.learn-more-btn');
+
+            function showAllMainSections() {
+                mainSections.forEach(section => {
+                    section.style.display = 'block';
+                });
+                cityPages.forEach(page => {
+                    page.style.display = 'none';
+                });
+            }
+
+            function showCityPage(pageId) {
+                mainSections.forEach(section => {
+                    section.style.display = 'none';
+                });
+                const targetPage = document.getElementById(pageId);
+                if (targetPage) {
+                    targetPage.style.display = 'block';
+                    window.scrollTo(0, 0);
+                }
+            }
+
+            learnMoreButtons.forEach(button => {
+                button.addEventListener('click', (event) => {
+                    const pageId = event.target.getAttribute('data-city');
+                    showCityPage(pageId);
+                });
+            });
+
+            backButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    showAllMainSections();
+                    const hospitalsSection = document.getElementById('hospitals-section');
+                    if (hospitalsSection) {
+                        hospitalsSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+
+            showAllMainSections();
+        });
+    </script>
+</body>
+
+</html>

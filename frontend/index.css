@@ -1,0 +1,820 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+:root {
+    --primary-color: #27ae60;
+    --secondary-color: #444;
+    --text-color: #777;
+    --bg-light: #f7f7f7;
+    --bg-dark: #222;
+    --border: .1rem solid rgba(0, 0, 0, .2);
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-light);
+    color: var(--secondary-color);
+}
+
+.section-heading {
+    text-align: center;
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0rem;
+    position: relative;
+    text-transform: capitalize;
+}
+
+.section-heading h1::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background: var(--primary-color);
+    margin: 1rem auto 0;
+}
+
+
+
+/* Header & Navbar */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 2rem 9%;
+    z-index: 100;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo img {
+    height: 5rem;
+}
+
+.menus ul {
+    list-style: none;
+    display: flex;
+}
+
+.menus ul li {
+    margin-left: 2.5rem;
+}
+
+.menus ul li a {
+    font-size: 1.7rem;
+    color: var(--secondary-color);
+    font-weight: 500;
+    position: relative;
+}
+
+.menus ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0.3rem;
+    background: var(--primary-color);
+    bottom: -0.5rem;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.menus ul li a:hover::after {
+    width: 100%;
+}
+
+#logoutBtn {
+    cursor: pointer;
+}
+
+/* Home Section */
+.page-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 2rem 9%;
+    padding-top: 10rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.social {
+    position: absolute;
+    left: 5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.social ul {
+    list-style: none;
+}
+
+.social ul li {
+    margin-bottom: 2rem;
+}
+
+.social ul li a {
+    color: var(--secondary-color);
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+.social ul li a:hover {
+    color: var(--primary-color);
+}
+
+.background-shapes .rectangle {
+    position: absolute;
+    height: 40rem;
+    width: 25rem;
+    background: var(--primary-color);
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+    border-radius: 20rem 0 0 20rem;
+    opacity: 0.8;
+}
+
+.background-shapes .circle {
+    position: absolute;
+    border-radius: 50%;
+    background: var(--primary-color);
+    opacity: 0.5;
+    z-index: -1;
+    height: 20rem;
+    width: 20rem;
+    right: 5rem;
+    top: 15rem;
+    /* Animation for the circle */
+    animation: moveCircle 7s linear infinite alternate;
+}
+
+.background-shapes .circle-2 {
+    position: absolute;
+    border-radius: 50%;
+    background: var(--primary-color);
+    opacity: 0.5;
+    z-index: -1;
+    height: 10rem;
+    width: 10rem;
+    left: 20rem;
+    top: 10rem;
+    /* Animation for the second circle */
+    animation: moveCircle2 5s linear infinite alternate;
+}
+
+@keyframes moveCircle {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-50px, 50px);
+    }
+}
+
+@keyframes moveCircle2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(30px, -30px);
+    }
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.leftside {
+    flex: 1;
+}
+
+.leftside .content h2 {
+    font-size: 6rem;
+    color: var(--secondary-color);
+    font-weight: 700;
+    text-transform: none;
+}
+
+.leftside .content h2 .highlight {
+    color: var(--primary-color);
+}
+
+.leftside .content h3 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin: 2rem 0;
+    text-transform: none;
+}
+
+.leftside .content .button {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 1.2rem 2.5rem;
+    border-radius: 2rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.leftside .content .button:hover {
+    background: var(--secondary-color);
+}
+
+.rightside {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.rightside img {
+    height: 60rem;
+    max-width: 100%;
+    /* Animation for the image */
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===============================
+   Hospitals Section
+=================================*/
+
+#hospitals-section {
+    padding: 10rem 9% 2rem;
+    background: #fff;
+
+}
+
+/* 2 Cards Per Row Layout */
+.cities-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 👈 2 boxes per row */
+    gap: 3rem;
+}
+
+/* City Card */
+.city-card {
+    background: var(--bg-light);
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.city-card:hover {
+    transform: translateY(-1rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+/* Image */
+.city-card .city-img img {
+    height: 20rem;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+/* Content */
+.city-card .city-content {
+    margin-top: 2rem;
+}
+
+.city-card .city-content h2 {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.city-card .city-content p {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    line-height: 1.8;
+}
+
+/* Button Container */
+.city-card .city-content .btn-1 {
+    margin-top: 2rem;
+}
+
+/* Button Styling */
+.city-card .city-content .btn-1 button {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 1rem 2.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.city-card .city-content .btn-1 button:hover {
+    background: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+/* ===============================
+   Sidebar
+=================================*/
+
+.sidebar {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    z-index: 99;
+}
+
+.sidebar img {
+    height: 6rem;
+    width: 6rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.sidebar img:hover {
+    transform: scale(1.1);
+}
+
+/* ===============================
+   Dynamic City Pages
+=================================*/
+
+.city-page {
+    display: none;
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+    background: var(--bg-light);
+}
+
+.city-page-content {
+    max-width: 80rem;
+    margin: 0 auto;
+    background: #fff;
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+}
+
+.city-page .back-btn {
+    background: var(--secondary-color);
+    color: #fff;
+    padding: 1rem 2.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s ease;
+    margin-bottom: 3rem;
+}
+
+.city-page .back-btn:hover {
+    background: var(--primary-color);
+}
+
+.city-page .city-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.city-page .city-header h2 {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.city-page .city-header p {
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+
+/* Hospital List */
+.hospital-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.hospital-card-detail {
+    background: var(--bg-light);
+    padding: 2.5rem;
+    border-left: 0.5rem solid var(--primary-color);
+    border-radius: 0.5rem;
+    box-shadow: 0 .2rem .5rem rgba(0, 0, 0, .05);
+    transition: transform 0.3s ease;
+}
+
+.hospital-card-detail:hover {
+    transform: translateX(0.5rem);
+}
+
+.hospital-card-detail h3 {
+    font-size: 2.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.hospital-card-detail p {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    line-height: 1.8;
+}
+
+/* ===============================
+   Responsive Design
+=================================*/
+
+@media (max-width: 768px) {
+    .cities-container {
+        grid-template-columns: 1fr; /* 1 box per row on mobile */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* About Us Section */
+#about-section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+    background: var(--bg-light);
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    flex-wrap: wrap;
+}
+
+.about-content {
+    flex: 1 1 40rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+}
+
+.about-content .box {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    padding: 2.5rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.about-content .box:hover {
+    transform: translateY(-1rem);
+}
+
+.about-content .box h3 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    text-transform: none;
+}
+
+.about-content .box i {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.about-content .box p {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    text-transform: none;
+}
+
+.about-image {
+    flex: 1 1 40rem;
+    text-align: center;
+}
+
+.about-image img {
+    height: 50rem;
+    max-width: 100%;
+}
+
+/* Counter & Contact Section */
+#contact-section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+    background: #fff;
+}
+
+.counter-container {
+    padding: 2rem 0;
+}
+
+.counter-container .box-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-bottom: 5rem;
+}
+
+.counter-container .box-container .box {
+    background: var(--bg-light);
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    padding: 3rem;
+    text-align: center;
+    flex: 1 1 20rem;
+}
+
+.counter-container .box-container .box i {
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.counter-container .box-container .box span {
+    font-size: 4rem;
+    color: var(--secondary-color);
+    font-weight: 700;
+    display: block;
+}
+
+.counter-container .box-container .box h3 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-top: 1rem;
+    text-transform: none;
+}
+
+.contacts-form {
+    padding: 2rem 9%;
+    text-align: center;
+}
+
+.contacts-form form {
+    background: var(--bg-light);
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    padding: 3rem;
+    max-width: 70rem;
+    margin: 0 auto;
+}
+
+.contacts-form form .inputBox {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contacts-form form .inputBox input,
+.contacts-form form .inputBox select,
+.contacts-form form textarea {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.6rem;
+    color: var(--secondary-color);
+    border: var(--border);
+    border-radius: 0.5rem;
+    background: #fff;
+}
+
+.contacts-form form textarea {
+    resize: none;
+    height: 15rem;
+    margin-bottom: 2rem;
+}
+
+.contacts-form form .btn-1 button {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 1.2rem 3rem;
+    border-radius: 0.5rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contacts-form form .btn-1 button:hover {
+    background: var(--secondary-color);
+}
+
+/* Footer Section */
+#footer-section {
+    background: var(--bg-dark);
+    padding: 5rem 9% 2rem;
+    color: #fff;
+}
+
+footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+footer .col {
+    flex: 1 1 25rem;
+}
+
+.footer-logo {
+    height: 5rem;
+    filter: invert(100%);
+}
+
+footer .col h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+footer .col p,
+footer .col ul li {
+    font-size: 1.5rem;
+    color: #ccc;
+    line-height: 1.8;
+}
+
+footer .col ul {
+    list-style: none;
+}
+
+footer .col ul li a {
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+footer .col ul li a:hover {
+    color: var(--primary-color);
+}
+
+.social-icon {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-icon img {
+    height: 3rem;
+    width: 3rem;
+    filter: invert(100%);
+    transition: transform 0.3s ease;
+}
+
+.social-icon img:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #444;
+    padding-top: 2rem;
+}
+
+.footer-bottom p {
+    font-size: 1.4rem;
+    color: #ccc;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 2rem;
+    }
+
+    .page-1 {
+        flex-direction: column-reverse;
+        padding-top: 15rem;
+        min-height: auto;
+    }
+
+    .leftside {
+        text-align: center;
+    }
+
+    .leftside .content {
+        margin-top: 5rem;
+    }
+
+    .rightside img {
+        height: 40rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar .menus {
+        display: none;
+    }
+
+    .navbar .logo {
+        width: 100%;
+        text-align: center;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-image img {
+        height: 30rem;
+    }
+
+    .contacts-form form .inputBox {
+        flex-direction: column;
+    }
+
+    footer .row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer .col {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}

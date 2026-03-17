@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Map</title>
+<style>
+    /* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Full-page layout */
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Map section takes full viewport */
+#map-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* full viewport height */
+}
+
+/* Heading overlay */
+.City-heading {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(39, 174, 96, 0.9);
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-align: center;
+    z-index: 10;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    animation: fadeDown 1s ease-in-out;
+}
+
+.City-heading h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Map iframe styling */
+.map-container {
+    width: 100%;
+    height: 100%; /* Ensures the container fills the parent #map-section */
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%; /* FIX: Ensures the iframe fills its parent container */
+    border: none;
+}
+
+/* Simple entry animation */
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -20px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .City-heading {
+        padding: 10px 20px;
+        top: 10px; /* Adjusted for smaller screens */
+    }
+    .City-heading h1 {
+        font-size: 1.3rem;
+    }
+}
+
+</style>
+</head>
+<body>
+    <section id="map-section">
+        <div class="City-heading">
+            <h1>Discover Nearby Healthcare Facilities on the Map </h1>
+        </div>
+        <div class="map-container">
+         <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448181.01203821686!2d76.81307318764546!3d28.647279935639277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d022defc6fba7%3A0xe6f42d6c32a1a1c5!2sAll%20India%20Institute%20of%20Medical%20Sciences!5e0!3m2!1sen!2sin!4v1704474738597!5m2!1sen!2sin"
+    allowfullscreen
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+        </div>
+    </section>
+
+</body>
+</html>

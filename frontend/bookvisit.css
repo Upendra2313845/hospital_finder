@@ -1,0 +1,106 @@
+/* Full-page background */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('https://tse2.mm.bing.net/th/id/OIP.FjSZsdlhU3Wa7ej9rhegywHaD-?cb=12&w=1588&h=851&rs=1&pid=ImgDetMain&o=7&rm=3') no-repeat center center/cover;
+}
+
+/* Overlay effect */
+.overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Container for text and form */
+.booking-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+    max-width: 1200px;
+    color: #f7eded;
+}
+
+/* Left text section */
+.booking-text {
+	color: rgb(19, 56, 21);
+    flex: 1;
+    padding-right: 50px;
+}
+
+.booking-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.booking-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1;
+}
+
+.booking-text strong {
+    font-weight: bold;
+}
+
+/* Right form section */
+.booking-form {
+    background: #cee6e3;
+    padding: 30px;
+    border-radius: 8px;
+    color: #000;
+    min-width: 300px;
+    flex: 1;
+    box-shadow: 0 4px 15px rgba(28, 23, 23, 0.2);
+}
+
+.booking-form h2 {
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.booking-form input {
+    width: calc(50% - 10px);
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #c5e7f0;
+    border-radius: 2px;
+}
+
+.booking-form input[type="text"],
+.booking-form input[type="email"],
+.booking-form input[type="tel"],
+.booking-form input[type="date"] {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.booking-form .address-group {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.booking-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #0e6565;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.booking-form button:hover {
+    background-color: #055430;
+}

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="bookvisit.css">
+    <title>Book Appointment</title>
+</head>
+
+<body>
+  
+    <div class="overlay">
+  <div class="booking-container">
+    <div class="booking-text">
+      <h1>Book You Slot Now and Save your time</h1>
+      <p>Welcome to HospitalOne Online Ticket Booking System. Follow the simple steps aside and get your appointment fixed online & Consult with the best doctor practicing near you.</p>
+      <p><strong>For Help Call : 1800-123-453</strong></p>
+    </div>
+    <div class="booking-form">
+      <h2>Book Appointment</h2>
+      <input type="text" placeholder="Enter Full Name">
+      <input type="tel" placeholder="Enter Mobile Number">
+      <input type="email" placeholder="Enter Email Address">
+      <input type="date" placeholder="Appointment Date">
+      <div class="address-group">
+        <input type="text" placeholder="Enter Area">
+        <input type="text" placeholder="Enter City">
+        <input type="text" placeholder="Enter State">
+        <input type="text" placeholder="Postal Code">
+      </div>
+      <button href="./index.html">Book Appointment</button>
+    </div>
+  </div>
+</div>
+
+
+    <!-- JS Scripts -->
+    <script src="./assets/js/jquery-3.3.1.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/bootstrap-datepicker.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#dat").datepicker();
+        });
+    </script>
+</body>
+</html>
